@@ -4,6 +4,8 @@ CLI instagram chat
 
 ![Screenshot](https://github.com/nemanjan00/tinsta/blob/master/screenshot/screenshot.png?raw=true)
 
+## Summary
+
 <!-- vim-markdown-toc GFM -->
 
 * [Authors](#authors)
