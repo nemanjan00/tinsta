@@ -1,0 +1,10 @@
+{
+  "name": "tinsta",
+  "version": "0.0.0",
+  "description": "CLI Instagram chat",
+  "main": "app.js",
+  "repository": "https://github.com/nemanjan00/tinsta",
+  "author": "Nemanja Nedeljkovic <nemanjan00@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
