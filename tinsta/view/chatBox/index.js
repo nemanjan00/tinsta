@@ -71,5 +71,7 @@ screen.key(["/"], function() {
 	textbox.focus();
 });
 
+log.focus();
+
 module.exports = box;
 
