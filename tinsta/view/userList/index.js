@@ -28,6 +28,16 @@ screen.append(list);
 list.addItem("@instazavodnik");
 list.addItem("\t@nemanjan00");
 
+screen.key(["C-p"], function() {
+	list.up(1);
+	screen.render();
+});
+
+screen.key(["C-n"], function() {
+	list.down(1);
+	screen.render();
+});
+
 list.on("select", () => {
 });
 
