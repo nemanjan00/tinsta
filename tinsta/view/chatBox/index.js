@@ -31,13 +31,17 @@ const textbox = blessed.textbox({
 	top: "100%-5",
 	border: {
 		type: "line"
-	}
+	},
+	mouse: true,
+	inputOnFocus: true
 });
 
 box.append(list);
 box.append(textbox);
 
 screen.append(box);
+
+textbox.focus();
 
 module.exports = box;
 

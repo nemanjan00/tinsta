@@ -31,7 +31,5 @@ list.addItem("\t@nemanjan00");
 list.on("select", () => {
 });
 
-list.focus();
-
 module.exports = list;
 
