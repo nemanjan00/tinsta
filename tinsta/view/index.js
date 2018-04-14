@@ -1,6 +1,8 @@
 const blessed = require("blessed");
 const config = require("../config");
 
+const manager = require("../manager");
+
 module.exports = () => {
 	const screen = blessed.screen({
 		smartCSR: true,
@@ -8,6 +10,7 @@ module.exports = () => {
 	});
 
 	config.set("screen", screen);
+	config.set("manager", manager);
 
 	screen.title = "tinsta";
 

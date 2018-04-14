@@ -2,6 +2,7 @@ const blessed = require("blessed");
 const config = require("../../config");
 
 const screen = config.get("screen");
+const manager = config.get("manager");
 
 const list = blessed.list({
 	style: {
@@ -25,9 +26,16 @@ const list = blessed.list({
 
 screen.append(list);
 
-list.addItem("@instazavodnik");
-list.addItem("\t@nemanjan00");
+// Logic
 
+list.on("select", () => {
+});
+
+manager.on("streamListChange", () => {
+
+});
+
+// Binding for stream navigation
 screen.key(["C-p"], function() {
 	list.up(1);
 	screen.render();
@@ -36,9 +44,6 @@ screen.key(["C-p"], function() {
 screen.key(["C-n"], function() {
 	list.down(1);
 	screen.render();
-});
-
-list.on("select", () => {
 });
 
 module.exports = list;
