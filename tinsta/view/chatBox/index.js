@@ -6,11 +6,7 @@ const screen = config.get("screen");
 const box = blessed.box({
 	left: "20%",
 	width: "80%",
-	height: "100%",
-	tags: true,
-	border: {
-		type: "line"
-	}
+	height: "100%"
 });
 
 screen.append(box);
@@ -25,8 +21,6 @@ const log = blessed.box({
 	},
 	height: "100%-3",
 	width: "100%",
-	top: "-20",
-	left: "-10",
 	scrollable: true, 
 	alwaysScroll: true,
 	mouse: true,
@@ -45,10 +39,9 @@ const textbox = blessed.textbox({
 			}
 		}
 	},
-	left: "-10",
 	width: "100%",
-	height: "70",
-	top: "100%-4",
+	height: "shrink",
+	bottom: "0",
 	border: {
 		type: "line"
 	},
