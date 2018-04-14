@@ -7,6 +7,9 @@
   "author": "Nemanja Nedeljkovic <nemanjan00@gmail.com>",
   "license": "MIT",
   "private": false,
+  "bin": {
+    "tinsta": "bin/tinsta"
+  },
   "dependencies": {
     "blessed": "^0.1.81",
     "instagram-private-api": "^0.6.7"
