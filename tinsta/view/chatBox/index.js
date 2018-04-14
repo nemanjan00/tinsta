@@ -68,5 +68,15 @@ screen.key(["i"], function() {
 	textbox.focus();
 });
 
+screen.key([":"], function() {
+	textbox.setValue(":");
+	textbox.focus();
+});
+
+screen.key(["/"], function() {
+	textbox.setValue("/");
+	textbox.focus();
+});
+
 module.exports = box;
 
