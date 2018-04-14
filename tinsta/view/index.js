@@ -3,7 +3,8 @@ const config = require("../config");
 
 module.exports = () => {
 	const screen = blessed.screen({
-		smartCSR: true
+		smartCSR: true,
+		fullUnicode: true
 	});
 
 	config.set("screen", screen);

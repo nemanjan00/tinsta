@@ -4,13 +4,6 @@ const config = require("../../config");
 const screen = config.get("screen");
 
 const box = blessed.box({
-	style: {
-		focus: {
-			border: {
-				fg: "blue"
-			}
-		}
-	},
 	left: "20%",
 	width: "80%",
 	height: "100%",
@@ -20,15 +13,42 @@ const box = blessed.box({
 	}
 });
 
-const list = blessed.list({
-	height: "100%-5"
+screen.append(box);
+
+const log = blessed.box({
+	style: {
+		focus: {
+			border: {
+				fg: "blue"
+			}
+		}
+	},
+	height: "100%-3",
+	width: "100%",
+	top: "-20",
+	left: "-10",
+	scrollable: true, 
+	alwaysScroll: true,
+	mouse: true,
+	border: {
+		type: "line"
+	}
 });
 
-list.add("12:00:04\t@instazavodnik\tTest");
+log.content += "12:00:04\t@instazavodnik\tTest 😀";
 
 const textbox = blessed.textbox({
+	style: {
+		focus: {
+			border: {
+				fg: "blue"
+			}
+		}
+	},
+	left: "-10",
+	width: "100%",
 	height: "70",
-	top: "100%-5",
+	top: "100%-4",
 	border: {
 		type: "line"
 	},
@@ -36,12 +56,17 @@ const textbox = blessed.textbox({
 	inputOnFocus: true
 });
 
-box.append(list);
+textbox.on("submit", () => {
+	textbox.clearValue();
+	screen.render();
+});
+
+box.append(log);
 box.append(textbox);
 
-screen.append(box);
-
-textbox.focus();
+screen.key(["i"], function() {
+	textbox.focus();
+});
 
 module.exports = box;
 
