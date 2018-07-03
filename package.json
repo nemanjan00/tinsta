@@ -12,6 +12,12 @@
   },
   "dependencies": {
     "blessed": "^0.1.81",
-    "instagram-private-api": "^0.6.7"
-  }
+    "instagram-private-api": "^0.6.7",
+    "snyk": "^1.88.0"
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
